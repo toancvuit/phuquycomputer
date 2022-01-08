@@ -1,0 +1,21 @@
+.margin {
+    margin: 20px;
+}
+.margin-home {
+    /* margin-top: 70px;
+    margin-left: 70px;
+    width: 400px; */
+}
+.width-image {
+    width: auto;
+    height: 250px;
+}
+.card-title {
+    color: #005aff;
+}
+.card-text {
+    color: #108110;
+}
+.float-left {
+    float: left;
+}

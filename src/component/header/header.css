@@ -1,0 +1,51 @@
+.site-layout-content {
+    min-height: 280px;
+    padding: 24px;
+    background: #fff;
+  }
+  #components-layout-demo-top .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .ant-row-rtl #components-layout-demo-top .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+  .color-menu {
+      background-color: #1266f1;
+      margin-top: 0;
+  }
+
+  .none-flex {
+      display: inline !important;
+  }
+  .display-inline {
+      display: inline-flex !important;
+      color: red;
+  }
+  .basic-nav-dropdown {
+    font-size: x-large;
+    color: white;
+  }
+  .dropdown-toggle::after {
+    color: white;
+  }
+  .header-color {
+    background-color: black;
+  }
+  .title-color {
+    color:white;
+  }
+  .font-weigth {
+    font-weight: 800;
+  }
+  .margin-top-bottom {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .text-decoration {
+    text-decoration: none;
+  }

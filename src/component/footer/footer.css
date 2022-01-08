@@ -1,0 +1,9 @@
+.display-inline {
+    display: inline-block;
+}
+.float-left {
+    float:left;
+}
+.footer-color {
+    background-color: #cdc9c9;
+}

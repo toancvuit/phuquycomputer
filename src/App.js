@@ -30,6 +30,12 @@ import Ocung from './page/phukien/ocung/ocung';
 import Lenovo from './page/laptop/lenovo/lenovo';
 import Hp from './page/laptop/hp/hp';
 
+import LG from './page/manhinh/lg/lg';
+import HP from './page/manhinh/hp/hp';
+import Provision from './page/manhinh/provision/provision';
+
+import Sualaptop from './page/dichvu/sualaptop/sualaptop';
+
 
 function App() {
   return (
@@ -43,6 +49,10 @@ function App() {
               <Route  path="/laptop/acer" component={()=><Acer/>}></Route>
               <Route  path="/laptop/lenovo" component={()=><Lenovo/>}></Route>
               <Route  path="/laptop/hp" component={()=><Hp/>}></Route>
+
+              <Route  path="/manhinh/lg" component={()=><LG/>}></Route>
+              <Route  path="/manhinh/hp" component={()=><HP/>}></Route>
+              <Route  path="/manhinh/provision" component={()=><Provision/>}></Route>
 
               <Route  path="/mayin/mayin" component={()=><Mayin/>}></Route>
               <Route  path="/mayin/mucin" component={()=><Mucin/>}></Route> 
@@ -59,6 +69,8 @@ function App() {
               <Route  path="/phukien/banphim" component={()=><Banphim/>}></Route>
               <Route  path="/phukien/tainghe" component={()=><Tainghe/>}></Route>
               <Route  path="/phukien/ocung" component={()=><Ocung/>}></Route>
+
+              <Route  path="/dichvu/sualaptop" component={()=><Sualaptop/>}></Route>
       </Switch>
       {/* <Home></Home> */}
       {/* <Mayin/> */}

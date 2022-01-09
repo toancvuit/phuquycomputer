@@ -37,9 +37,9 @@ class Header extends React.Component {
                             <NavDropdown.Item href="#action/3.4">Main msi</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={<span className='title-color'>Màn hình</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">LG</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">HP</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Provision</NavDropdown.Item>
+                            <NavDropdown.Item href="/manhinh/lg"><Link to="/manhinh/lg" className='text-decoration'>LG</Link></NavDropdown.Item>
+                            <NavDropdown.Item href="/manhinh/hp"><Link to="/manhinh/hp" className='text-decoration'>HP</Link></NavDropdown.Item>
+                            <NavDropdown.Item href="/manhinh/hp"><Link to="/manhinh/provision" className='text-decoration'>Provision</Link></NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={<span className='title-color'>Phụ kiện</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
                             <NavDropdown.Item href="/phukien/loa"><Link to="/phukien/loa" className='text-decoration'>Loa</Link></NavDropdown.Item>
@@ -62,10 +62,11 @@ class Header extends React.Component {
                             <NavDropdown.Item href="/wifi/hubwifi"><Link to="/wifi/hubwifi" className='text-decoration'>Bộ mở rộng wifi</Link></NavDropdown.Item>
                             </NavDropdown>
                         <NavDropdown title={<span className='title-color'>Dịch Vụ   </span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Sửa Laptop</NavDropdown.Item>
+                        <NavDropdown.Item href="/laptop/hp"><Link to="/dichvu/sualaptop" className='text-decoration'>Sửa laptop</Link></NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Lắp đặt - Sửa PC</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Lắp đặt Camera</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.4">Lắp đặt - Sửa chữa máy in</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Bảo trì phòng net</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.4">Sửa chữa tận nhà</NavDropdown.Item>
                         
                         </NavDropdown>

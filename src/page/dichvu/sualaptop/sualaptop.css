@@ -1,0 +1,26 @@
+@media screen and (min-width: 700px) {
+    .width-image-mayin {
+        margin-top: 30px;
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .width-image-mayin {
+        margin-top: 30px;
+        height: 400px;
+        width: auto !important;
+    }
+}
+
+.container {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.color-title {
+    color:#ff8d00;
+}
+.no-list-item {
+    list-style-type: none !important;
+}

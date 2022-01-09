@@ -26,10 +26,9 @@ class Header extends React.Component {
                             <NavDropdown.Item href="/laptop/asus"><Link to="/laptop/asus" className='text-decoration'>Asus</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/laptop/dell"><Link to="/laptop/dell" className='text-decoration'>Dell</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/laptop/acer"><Link to="/laptop/acer" className='text-decoration'>Acer</Link></NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Lenovo</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Hp</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">MSI</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Sony</NavDropdown.Item>
+                            <NavDropdown.Item href="/laptop/lenovo"><Link to="/laptop/lenovo" className='text-decoration'>Lenovo</Link></NavDropdown.Item>
+                            <NavDropdown.Item href="/laptop/hp"><Link to="/laptop/hp" className='text-decoration'>Hp</Link></NavDropdown.Item>
+                            
                         </NavDropdown>
                         <NavDropdown title={<span className='title-color'>PC-Máy bàn</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Main Asus</NavDropdown.Item>

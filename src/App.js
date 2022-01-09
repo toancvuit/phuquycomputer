@@ -27,6 +27,8 @@ import Chuot from './page/phukien/chuot/chuot';
 import Banphim from './page/phukien/banphim/banphim';
 import Tainghe from './page/phukien/tainghe/tainghe';
 import Ocung from './page/phukien/ocung/ocung';
+import Lenovo from './page/laptop/lenovo/lenovo';
+import Hp from './page/laptop/hp/hp';
 
 
 function App() {
@@ -39,6 +41,9 @@ function App() {
               <Route  path="/laptop/dell" component={()=><Dell/>}></Route>
               <Route  path="/laptop/asus" component={()=><Asus/>}></Route>
               <Route  path="/laptop/acer" component={()=><Acer/>}></Route>
+              <Route  path="/laptop/lenovo" component={()=><Lenovo/>}></Route>
+              <Route  path="/laptop/hp" component={()=><Hp/>}></Route>
+
               <Route  path="/mayin/mayin" component={()=><Mayin/>}></Route>
               <Route  path="/mayin/mucin" component={()=><Mucin/>}></Route> 
               <Route  path="/mayin/hopmuc" component={()=><Hopmuc/>}></Route>

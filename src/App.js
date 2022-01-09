@@ -35,6 +35,11 @@ import HP from './page/manhinh/hp/hp';
 import Provision from './page/manhinh/provision/provision';
 
 import Sualaptop from './page/dichvu/sualaptop/sualaptop';
+import PC from './page/dichvu/pc/pc';
+import Camera from './page/dichvu/camera/camera';
+import Suamayin from './page/dichvu/mayin/suamayin';
+import Baotrinet from './page/dichvu/baotrinet/baotrinet';
+import Suachuatannha from './page/dichvu/suachuatannha/suachuatannha';
 
 
 function App() {
@@ -71,6 +76,11 @@ function App() {
               <Route  path="/phukien/ocung" component={()=><Ocung/>}></Route>
 
               <Route  path="/dichvu/sualaptop" component={()=><Sualaptop/>}></Route>
+              <Route  path="/dichvu/pc" component={()=><PC/>}></Route>
+              <Route  path="/dichvu/camera" component={()=><Camera/>}></Route>
+              <Route  path="/dichvu/mayin" component={()=><Suamayin/>}></Route>
+              <Route  path="/dichvu/baotrinet" component={()=><Baotrinet/>}></Route>
+              <Route  path="/dichvu/suachuatannha" component={()=><Suachuatannha/>}></Route>
       </Switch>
       {/* <Home></Home> */}
       {/* <Mayin/> */}

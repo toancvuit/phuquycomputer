@@ -21,6 +21,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import ReactDOM from 'react-dom'
 
 import Loa from './page/phukien/loa/loa';
 import Chuot from './page/phukien/chuot/chuot';

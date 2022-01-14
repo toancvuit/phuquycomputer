@@ -42,6 +42,10 @@ import Suamayin from './page/dichvu/mayin/suamayin';
 import Baotrinet from './page/dichvu/baotrinet/baotrinet';
 import Suachuatannha from './page/dichvu/suachuatannha/suachuatannha';
 
+import Mainasus from './page/pc/asus/asus';
+import Maingigabyte from './page/pc/gigabyte/gigabyte';
+import Mainmsi from './page/pc/msi/msi';
+
 
 function App() {
   return (
@@ -55,6 +59,10 @@ function App() {
               <Route  path="/laptop/acer" component={()=><Acer/>}></Route>
               <Route  path="/laptop/lenovo" component={()=><Lenovo/>}></Route>
               <Route  path="/laptop/hp" component={()=><Hp/>}></Route>
+
+              <Route  path="/main/asus" component={()=><Mainasus/>}></Route>
+              <Route  path="/main/gigabyte" component={()=><Maingigabyte/>}></Route>
+              <Route  path="/main/msi" component={()=><Mainmsi/>}></Route>
 
               <Route  path="/manhinh/lg" component={()=><LG/>}></Route>
               <Route  path="/manhinh/hp" component={()=><HP/>}></Route>

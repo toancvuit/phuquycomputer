@@ -11,9 +11,10 @@ import reducer from './reducers';
 import {Provider} from 'react-redux'
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ;
+//add develop redux dev tool
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+const store = createStore(reducer, composeEnhancer(applyMiddleware(sagaMiddleware)));
 sagaMiddleware.run(rootSaga);
 
 

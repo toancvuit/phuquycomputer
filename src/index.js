@@ -4,12 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import rootSaga from './saga';
+import reducer from './reducers';
+import {Provider} from 'react-redux'
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(rootSaga);
+
+
+
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store ={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -45,6 +45,21 @@ import Suachuatannha from './page/dichvu/suachuatannha/suachuatannha';
 import Mainasus from './page/pc/asus/asus';
 import Maingigabyte from './page/pc/gigabyte/gigabyte';
 import Mainmsi from './page/pc/msi/msi';
+import Counter from './page/couter/couter';
+import {connect} from 'react-redux'
+
+// var action = type => store.dispatch({ type });
+// function Counter(){
+//   return(
+//     <CounterTemp
+//       value={store.getState()}
+//       onIncrement={() => action('INCREMENT')}
+//       onDecrement={() => action('DECREMENT')}
+//       onIncrementIfOdd={() => action('INCREMENT_IF_ODD')}
+//       onIncrementAsync={() => action('INCREMENT_ASYNC')}
+//     />
+//   )
+// }
 
 
 function App() {
@@ -90,6 +105,7 @@ function App() {
               <Route  path="/dichvu/mayin" component={()=><Suamayin/>}></Route>
               <Route  path="/dichvu/baotrinet" component={()=><Baotrinet/>}></Route>
               <Route  path="/dichvu/suachuatannha" component={()=><Suachuatannha/>}></Route>
+              <Route  path="/counter" component={()=><Counter></Counter>}></Route>
       </Switch>
       {/* <Home></Home> */}
       {/* <Mayin/> */}

@@ -67,7 +67,7 @@ class Header extends React.Component {
                             <NavDropdown.Item href="/dichvu/mayin"><Link to="/dichvu/mayin" className='text-decoration'>Lắp đặt - sửa chữa máy in</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/dichvu/baotrinet"><Link to="/dichvu/baotrinet" className='text-decoration'>Bảo trì phòng net</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/dichvu/suachuatannha"><Link to="/dichvu/suachuatannha" className='text-decoration'>Sữa chữa máy tính tận nha</Link></NavDropdown.Item>
-                            
+                            <NavDropdown.Item href="/counter"><Link to="/counter">Counter</Link></NavDropdown.Item>
                         
                         </NavDropdown>
                     

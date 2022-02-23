@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {increment} from '../../action'
 
 // const Counter = ({ value, onIncrement, onIncrementAsync, onDecrement, onIncrementIfOdd }) => (
 //   <p>
@@ -36,7 +37,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     onIncrement: () => {
-      dispatch({type: 'INCREMENT'});
+      // dispatch({type: 'INCREMENT'});
+      //di thang den reducer
+      dispatch(increment());
     },
     
   }

@@ -1,4 +1,13 @@
-export default function counter(state = 1, action) {
+
+
+import { combineReducers } from 'redux';
+import hp from './hp';
+
+const appReducers = combineReducers({
+  hp
+});
+
+export function counter(state = 1, action) {
   switch (action.type) {
     case 'INCREMENT':
       console.log('show action here');
@@ -12,3 +21,5 @@ export default function counter(state = 1, action) {
       return state
   }
 }
+export default appReducers;
+

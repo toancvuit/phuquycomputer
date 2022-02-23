@@ -1,8 +1,15 @@
 import React from 'react';
 import './hp.css'
-import {Col,Row} from 'react-bootstrap';
+import {Col,Row,Modal,Button} from 'react-bootstrap';
+import {connect} from 'react-redux';
+import {openHpModel} from '../../../action'
 class Hp extends React.Component {
+    constructor(props){
+        super(props);
+    }
+   
     render () {
+        console.log(this.props.isOpenModel);
         return (
             <div className='container'>
                 <Row>
@@ -21,11 +28,39 @@ class Hp extends React.Component {
                                 <p className="card-text">10.390.000đ</p>
                         </div>
                     </Col>
+                    <Button variant="primary" onClick={this.props.openHpModel}>
+                        Open HP Model
+                    </Button>
+                    <Modal show={this.props.isOpenModel} onHide={this.props.openHpModel} animation={false}>
+                        <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                        <Modal.Footer>
+                        <Button variant="secondary" onClick={this.props.openHpModel}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={this.props.openHpModel}>
+                            Save Changes
+                        </Button>
+                        </Modal.Footer>
+                    </Modal>
                     
              </Row>  
             </div>
         );
     }
+};
+const mapStateToProps = (state,props) => {
+    return {
+        isOpenModel: state.hp.isOpenModel
+    }
 }
-
-export default Hp;
+const mapDispatchToProps= (dispatch, props) => {
+    return {
+        openHpModel: ()=> {
+            dispatch(openHpModel())
+        }
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Hp);

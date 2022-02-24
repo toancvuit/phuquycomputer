@@ -60,7 +60,7 @@ class Header extends React.Component {
                             <NavDropdown.Item href="/wifi/routerwifi"><Link to="/wifi/routerwifi" className='text-decoration'>Router wifi</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/wifi/hubwifi"><Link to="/wifi/hubwifi" className='text-decoration'>Bộ mở rộng wifi</Link></NavDropdown.Item>
                             </NavDropdown>
-                            <NavDropdown title={<span className='title-color'>Dịch Vụ   </span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
+                            <NavDropdown title={<span className='title-color'>Dịch Vụ</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
                             <NavDropdown.Item href="/dichvu/sualaptop"><Link to="/dichvu/sualaptop" className='text-decoration'>Sửa laptop</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/dichvu/pc"><Link to="/dichvu/pc" className='text-decoration'>Sửa chữa lắp đặt PC</Link></NavDropdown.Item>
                             <NavDropdown.Item href="/dichvu/camera"><Link to="/dichvu/camera" className='text-decoration'>Lắp đặt camera</Link></NavDropdown.Item>

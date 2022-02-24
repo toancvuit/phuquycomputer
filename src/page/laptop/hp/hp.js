@@ -26,11 +26,12 @@ class Hp extends React.Component {
                                     <li> 1.47 kg</li>
                                 </ul>
                                 <p className="card-text">10.390.000đ</p>
+                                <Button variant="primary" onClick={this.props.openHpModel}>
+                                    Open HP Model
+                                </Button>
                         </div>
                     </Col>
-                    <Button variant="primary" onClick={this.props.openHpModel}>
-                        Open HP Model
-                    </Button>
+                    
                     <Modal show={this.props.isOpenModel} onHide={this.props.openHpModel} animation={false}>
                         <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>

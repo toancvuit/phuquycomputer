@@ -23,7 +23,7 @@
 //   "credentials": "include"
 // }) .then(res=> console.log(res.json()))
 // .catch(err=>console.log(err))
-axios.get(server.SERVER_URL+'/temp')
+axios.get(server.SERVER_URL+'/hp')
 .then(res => res.data)
 .then(res=> console.log(res));
     // var config = {

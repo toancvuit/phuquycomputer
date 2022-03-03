@@ -21,3 +21,13 @@
 .card-text {
     color:red;
 }
+
+.modal-dialog {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+@media only screen and ((min-width: 576px)) {
+    
+  }

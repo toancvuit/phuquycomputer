@@ -2,14 +2,18 @@ import React from 'react';
 import './hp.css'
 import {Col,Row,Modal,Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {openHpModel} from '../../../action'
+import {openHpModel,hpgetlist} from '../../../action'
 class Hp extends React.Component {
     constructor(props){
         super(props);
     }
+    componentDidMount() {
+        this.props.hpgetlist();
+    }
    
     render () {
         console.log(this.props.isOpenModel);
+        console.log(this.props.data);
         return (
             <div className='container'>
                 <Row>
@@ -54,13 +58,17 @@ class Hp extends React.Component {
 };
 const mapStateToProps = (state,props) => {
     return {
-        isOpenModel: state.hp.isOpenModel
+        isOpenModel: state.hp.isOpenModel,
+        data: state.hp.data //listDefault atributeSpectItem
     }
 }
 const mapDispatchToProps= (dispatch, props) => {
     return {
         openHpModel: ()=> {
             dispatch(openHpModel())
+        },
+        hpgetlist: ()=> {
+            dispatch(hpgetlist())
         }
     }
 }

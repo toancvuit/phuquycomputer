@@ -25,8 +25,15 @@ const required = (value) => {
 }
 
 const email = (value) => {
-  if (!isEmail(value)) {
-      return <small className="form-text text-danger">Invalid email format</small>;
+  // if (!isEmail(value)) {
+  //     return <small className="form-text text-danger">Invalid email format</small>;
+  // }
+  if (value.indexOf(index => index='@')==1) {
+    return <small className="form-text text-danger">email hợp lệ</small>;
+  }
+  else {
+    return <small className="form-text text-success
+    ">email hợp lệ</small>;
   }
 }
 

@@ -1,5 +1,7 @@
+import * as type from '../type/type'
 var initState = {
-    isOpenModel: false
+    isOpenModel: false,
+    data: {}
 };
 const hp = (state=initState, action)=>{
     switch(action.type) {
@@ -7,6 +9,18 @@ const hp = (state=initState, action)=>{
         return {
             ...state, isOpenModel: !state.isOpenModel
         }
+        case type.HPGETLIST: 
+            console.log('reducer hp get list');
+            return{
+                ...state
+            }
+        case type.HPGETLISTDATA:
+            console.log('reducer hp get list data' +action.data)
+            console.log(action.data)
+            return {
+                ...state,data:action.data
+
+            }
         default :
         return state;
     }

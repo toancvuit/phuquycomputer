@@ -46,7 +46,7 @@ import Mainasus from './page/pc/asus/asus';
 import Maingigabyte from './page/pc/gigabyte/gigabyte';
 import Mainmsi from './page/pc/msi/msi';
 import Counter from './page/couter/couter';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
 // var action = type => store.dispatch({ type });
 // function Counter(){

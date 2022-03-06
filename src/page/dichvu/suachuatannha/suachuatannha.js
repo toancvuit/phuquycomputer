@@ -8,7 +8,7 @@ class Suachuatannha extends React.Component {
                 <Row>
                     <h3 className='color-title'>Sữa chữa máy tính máy in tận nhà</h3>
                     <ul className='no-list-item'>
-                        <li>Liên hệ: 03333 29173</li>
+                        <li>Liên hệ: Phú Quý 0908 689898</li>
                         
                     </ul>
                     

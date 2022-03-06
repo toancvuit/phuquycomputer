@@ -12,7 +12,7 @@ export function* incrementAsync() {
   yield put({ type: 'INCREMENT' })
 }
 export function* hpgetlistdataa() {
-  var temp;
+  let temp;
   yield axios.get(server.SERVER_URL+'/hp')
   .then(res=>res.data.datas)
   .then(res=> {
@@ -29,7 +29,7 @@ export function* hpgetlistdataa() {
 }
 
 export function* acergetlistdata() {
-  var temp;
+  let temp;
   yield axios.get(server.SERVER_URL+'/acer')
   .then(res=>res.data.datas)
   .then(res=> {
@@ -45,7 +45,7 @@ export function* acergetlistdata() {
 }
 
 export function* dellgetlistdata() {
-  var temp;
+  let temp;
   yield axios.get(server.SERVER_URL+'/dell')
   .then(res=>res.data.datas)
   .then(res=> {
@@ -59,9 +59,26 @@ export function* dellgetlistdata() {
     data: temp
   })
 }
+export function* lenovogetlistdata() {
+  let temp;
+  console.log('lenovo get list data');
+  yield axios.get(server.SERVER_URL+'/lenovo')
+  .then(res=>res.data.datas)
+  .then(res=> {
+      temp = res.filterModel;
+      console.log(temp)      
+  }).catch(err=>{
+    console.log(err)
+  })
+  yield  put({
+    type: types.LENOVOGETLISTDATA,
+    data: temp
+  })
+}
 export default function* rootSaga() {
   yield takeEvery('INCREMENT_ASYNC', incrementAsync)
   yield takeEvery(types.HPGETLIST, hpgetlistdataa)
   yield takeEvery(types.ACERGETLIST, acergetlistdata)
   yield takeEvery(types.DELLGETLIST, dellgetlistdata)
+  yield takeEvery(types.LENOVOGETLIST, lenovogetlistdata)
 }

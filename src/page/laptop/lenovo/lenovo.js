@@ -18,7 +18,7 @@ class Lenovo extends React.Component {
             <div className='container'>
                 <Row>
                     {/* <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/laptop/lenovo/ideapad.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/laptop/lenovo/ideapad.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Laptop Lenovo IdeaPad Slim 3 15ADA05 R5 3500U/8GB/512GB SSD/15.6HD Touch/Win 10</h6>
                                 <ul>
@@ -54,7 +54,7 @@ class Lenovo extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>
@@ -82,14 +82,14 @@ class Lenovo extends React.Component {
 function ShowImageLaptop(props) {
     console.log(props.random)
     if(props.random ===0) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/ideapad.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/ideapad.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
     }
     else if (props.random ===1) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo1.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo1.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else if (props.random ===2) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo2.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo2.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else {
-        return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo3.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+        return (<img src={process.env.PUBLIC_URL + "/laptop/lenovo/lenovo3.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }
 }
 

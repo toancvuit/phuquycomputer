@@ -7,7 +7,7 @@ class Asus extends React.Component {
             <div className='container'>
                 <Row>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/laptop/asus/zenbook.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/laptop/asus/zenbook.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Asus ZenBook</h6>
                             <ul>
@@ -22,7 +22,7 @@ class Asus extends React.Component {
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Laptop Asus Vivobook X415EA-EB935W i3 1115G4/8GB/256GB SSD/Win11</h6>
                             <ul>
@@ -38,7 +38,7 @@ class Asus extends React.Component {
                 </Col>
                 
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Laptop Asus Vivobook X515MA-BR478W N4020/4GB/256GB SSD/Win11</h6>
                             <ul>
@@ -53,7 +53,7 @@ class Asus extends React.Component {
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/laptop/asus/x415ae.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Laptop Asus Vivobook X515FA-EJ007T i3 10110U/8GB/256GB SSD/Win10</h6>
                             <ul>

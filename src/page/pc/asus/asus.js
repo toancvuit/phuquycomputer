@@ -7,7 +7,7 @@ class Mainasus extends React.Component {
             <div className='container'>
                 <Row>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/main/asus/h510m.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/main/asus/h510m.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Mainboard Asus EX-H510M-V3</h6>
                             <ul>
@@ -21,7 +21,7 @@ class Mainasus extends React.Component {
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/main/asus/h410m.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/main/asus/h410m.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Mainboard ASUS PRIME H410M-K</h6>
                             <ul>

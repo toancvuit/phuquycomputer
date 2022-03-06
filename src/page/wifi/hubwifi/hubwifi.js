@@ -7,7 +7,7 @@ class Hubwifi extends React.Component {
             <div className='container'>
                 <Row>
                     <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/wifi/hubwifi/tlwa850re.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/wifi/hubwifi/tlwa850re.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Router Wifi Chuẩn Wifi 6 AX1500 TP-Link Archer AX10 Đen</h6>
                                 <ul>

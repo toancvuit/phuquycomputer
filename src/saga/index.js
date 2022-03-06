@@ -75,10 +75,28 @@ export function* lenovogetlistdata() {
     data: temp
   })
 }
+
+export function* asusgetlistdata() {
+  let temp;
+  console.log('asus get list data');
+  yield axios.get(server.SERVER_URL+'/asus')
+  .then(res=>res.data.datas)
+  .then(res=> {
+      temp = res.filterModel;
+      console.log(temp)      
+  }).catch(err=>{
+    console.log(err)
+  })
+  yield  put({
+    type: types.ASUSGETLISTDATA,
+    data: temp
+  })
+}
 export default function* rootSaga() {
   yield takeEvery('INCREMENT_ASYNC', incrementAsync)
   yield takeEvery(types.HPGETLIST, hpgetlistdataa)
   yield takeEvery(types.ACERGETLIST, acergetlistdata)
   yield takeEvery(types.DELLGETLIST, dellgetlistdata)
   yield takeEvery(types.LENOVOGETLIST, lenovogetlistdata)
+  yield takeEvery(types.ASUSGETLIST, asusgetlistdata)
 }

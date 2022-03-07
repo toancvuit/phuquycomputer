@@ -7,7 +7,7 @@ class HP extends React.Component {
             <div className='container'>
                 <Row>
                     <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/manhinh/hp/hp2y.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/manhinh/hp/hp2y.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Màn hình máy tính HP 22Y 21.5 inch Display (1PX47AA)</h6>
                                 <ul>

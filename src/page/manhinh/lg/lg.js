@@ -7,7 +7,7 @@ class LG extends React.Component {
             <div className='container'>
                 <Row>
                     <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/manhinh/lg/lg22mk.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/manhinh/lg/lg22mk.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Màn hình LG 22MK430H-B 21.5Inch 75Hz IPS</h6>
                                 <ul>

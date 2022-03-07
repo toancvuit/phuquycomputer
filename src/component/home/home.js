@@ -12,21 +12,21 @@ class Home extends React.Component {
                 <br/>
                 <Row >
                     <Col className='card col-12 col-sm-3'>
-                        <img src='./home/laptop.png' className="card-img-top width-image" alt="laptop"/>
+                        <img src='./home/laptop.PNG' className="card-img-top width-image" alt="laptop"/>
                         <div className="card-body">
                             <h5 className="card-title">Laptop</h5>
                             <p className="card-text">Chuyên mua bán các loại laptop</p>
                          </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src="./home/pc.png" className="card-img-top width-image" alt="pc"/>
+                        <img src="./home/pc.PNG" className="card-img-top width-image" alt="pc"/>
                         <div className="card-body">
                             <h5 className="card-title">PC - Máy bàn</h5>
                             <p className="card-text">Lắp đặt các loại máy bàn theo yêu cầu ...</p>
                              </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src="./home/manhinh.png" className="card-img-top width-image" alt="manhinh"/>
+                        <img src="./home/manhinh.PNG" className="card-img-top width-image" alt="manhinh"/>
                         <div className="card-body">
                             <h5 className="card-title">Màn hình</h5>
                             <p className="card-text">Cung cấp các loại màn hình ...</p>
@@ -41,21 +41,21 @@ class Home extends React.Component {
                          </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src="./home/mayin.png" className="card-img-top width-image" alt="mayin"/>
+                        <img src="./home/mayin.PNG" className="card-img-top width-image" alt="mayin"/>
                         <div className="card-body">
                             <h5 className="card-title">Máy in</h5>
                             <p className="card-text">Bán các loại máy in canon, hp, brother ...</p>
                              </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src="./home/camera.png" className="card-img-top width-image" alt="camera"/>
+                        <img src="./home/camera.PNG" className="card-img-top width-image" alt="camera"/>
                         <div className="card-body">
                             <h5 className="card-title">Camera</h5>
                             <p className="card-text">Lắp đặt các loại camera ...</p>
                              </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src="./home/wifi.png" className="card-img-top width-image" alt="wifi"/>
+                        <img src="./home/wifi.PNG" className="card-img-top width-image" alt="wifi"/>
                         <div className="card-body">
                             <h5 className="card-title">Wifi</h5>
                             <p className="card-text">Bán các loại wifi ...</p>

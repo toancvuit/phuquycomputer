@@ -7,7 +7,7 @@ class Mainmsi extends React.Component {
             <div className='container'>
                 <Row>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/main/msi/h510.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/main/msi/h510.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Mainboard MSI H510M PRO-E</h6>
                             <ul>
@@ -21,7 +21,7 @@ class Mainmsi extends React.Component {
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/main/msi/h410.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/main/msi/h410.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Mainboard MSI H410M PRO-E</h6>
                             <ul>

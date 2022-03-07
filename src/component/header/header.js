@@ -12,7 +12,7 @@ class Header extends React.Component {
                 <Navbar.Brand className='header-color'>
                     <div className='display-inline'>
                         <Link to="/" className='text-decoration display-inline'>
-                        <img src={process.env.PUBLIC_URL + '/logo/logo.png'}  height='100' width='auto' alt="logo" />
+                        <img src={process.env.PUBLIC_URL + '/logo/logo.PNG'}  height='100' width='auto' alt="logo" />
                             <h2 className='font-weigth'>TRUNG TÂM TIN HỌC ĐIỆN TỬ <br/>
                                 PHÚ QUÝ</h2>
                         </Link>

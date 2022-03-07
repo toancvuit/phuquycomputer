@@ -39,7 +39,7 @@ class Dell extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>
@@ -61,7 +61,7 @@ class Dell extends React.Component {
                     }
 
                     {/* <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/laptop/dell/n3511.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/laptop/dell/n3511.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Laptop Dell Inspiron 15 N3511 i3 </h6>
                                 <ul>
@@ -85,14 +85,14 @@ class Dell extends React.Component {
 function ShowImageLaptop(props) {
     console.log(props.random)
     if(props.random ===0) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/n3511.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/n3511.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
     }
     else if (props.random ===1) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell3.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell3.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else if (props.random ===2) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell1.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell1.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else {
-        return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell2.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
+        return (<img src={process.env.PUBLIC_URL + "/laptop/dell/dell2.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }
 }
 

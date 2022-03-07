@@ -7,7 +7,7 @@ class Routerwifi extends React.Component {
             <div className='container'>
                 <Row>
                 <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/camera/khongday/ebitcam.png"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/camera/khongday/ebitcam.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Ebitcam</h6>
                                 <ul>

@@ -3,7 +3,6 @@ import './asus.css'
 import {Col,Row} from 'react-bootstrap';
 import {connect} from 'react-redux'
 import {asusGetList} from '../../../action'
-const _ = require('lodash')
 
 class Asus extends React.Component {
     componentDidMount() {
@@ -40,7 +39,7 @@ class Asus extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>
@@ -61,7 +60,7 @@ class Asus extends React.Component {
                         })
                     }
                 {/* <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/laptop/asus/zenbook.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/laptop/asus/zenbook.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Asus ZenBook</h6>
                             <ul>
@@ -83,14 +82,14 @@ class Asus extends React.Component {
 function ShowImageLaptop(props) {
     console.log(props.random)
     if(props.random ===0) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus0.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus0.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
     }
     else if (props.random ===1) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus1.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus1.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else if (props.random ===2) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus2.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus2.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else {
-        return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus3.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+        return (<img src={process.env.PUBLIC_URL + "/laptop/asus/asus3.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }
 }
 const mapStateToProps = (state, props) => {

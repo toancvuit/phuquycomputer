@@ -77,6 +77,9 @@ export function* lenovogetlistdata() {
 }
 
 export function* asusgetlistdata() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
   let temp;
   console.log('asus get list data');
   yield axios.get(server.SERVER_URL+'/asus')
@@ -86,6 +89,9 @@ export function* asusgetlistdata() {
       console.log(temp)      
   }).catch(err=>{
     console.log(err)
+  })
+  yield put({
+    type: types.LOADINGFALSE
   })
   yield  put({
     type: types.ASUSGETLISTDATA,

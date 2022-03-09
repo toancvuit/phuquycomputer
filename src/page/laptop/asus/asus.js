@@ -1,9 +1,11 @@
 import React from 'react';
+import Loading from '../../../component/loading/loading';
 import './asus.css'
 import {Col,Row} from 'react-bootstrap';
 import {connect} from 'react-redux'
 import {asusGetList} from '../../../action';
 const _ = require('lodash');
+
 
 class Asus extends React.Component {
     componentDidMount() {
@@ -17,6 +19,7 @@ class Asus extends React.Component {
         let showItemp = _.filter(arraytemp,(obj)=>obj.attributeID == 33);
         return (
             <div className='container'>
+                {this.props.loading ===true ?<Loading/> :
                 <Row>
                 {
                         showItemp.map(item => {
@@ -76,6 +79,7 @@ class Asus extends React.Component {
                     </div>
                 </Col>                                */}
              </Row>  
+            }
             </div>
         );
     }
@@ -95,7 +99,8 @@ function ShowImageLaptop(props) {
 }
 const mapStateToProps = (state, props) => {
     return {
-        data: state.asus.data
+        data: state.asus.data,
+        loading: state.loading.loading
     }
 }
 

@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
+// import createSagaMiddleware from 'redux-saga'
+import * as configure from './config'
 import rootSaga from './saga';
 import reducer from './reducers';
 import {Provider} from 'react-redux'
@@ -13,15 +14,16 @@ import {Provider} from 'react-redux'
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ;
 //add develop redux dev tool
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, composeEnhancer(applyMiddleware(sagaMiddleware)));
-sagaMiddleware.run(rootSaga);
+// const sagaMiddleware = createSagaMiddleware();
+// const store = createStore(reducer, composeEnhancer(applyMiddleware(sagaMiddleware)));
+// const store = createStore(reducer, applyMiddleware(sagaMiddleware))));
+configure.sagaMiddleware.run(rootSaga);
 
 
 
 
 ReactDOM.render(
-  <Provider store ={store}>
+  <Provider store ={configure.store}>
     <App />
   </Provider>,
   document.getElementById('root')

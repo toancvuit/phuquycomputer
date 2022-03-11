@@ -12,6 +12,9 @@ export function* incrementAsync() {
   yield put({ type: 'INCREMENT' })
 }
 export function* hpgetlistdataa() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
   let temp;
   yield axios.get(server.SERVER_URL+'/hp')
   .then(res=>res.data.datas)
@@ -21,6 +24,9 @@ export function* hpgetlistdataa() {
   }).catch(err=>{
     console.log(err)
   })
+  yield put({
+    type: types.LOADINGFALSE
+  })
   yield  put({
     type: types.HPGETLISTDATA,
     data: temp
@@ -29,6 +35,9 @@ export function* hpgetlistdataa() {
 }
 
 export function* acergetlistdata() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
   let temp;
   yield axios.get(server.SERVER_URL+'/acer')
   .then(res=>res.data.datas)
@@ -38,6 +47,9 @@ export function* acergetlistdata() {
   }).catch(err=>{
     console.log(err)
   })
+  yield put({
+    type: types.LOADINGFALSE
+  })
   yield  put({
     type: types.ACERGETLISTDATA,
     data: temp
@@ -45,6 +57,9 @@ export function* acergetlistdata() {
 }
 
 export function* dellgetlistdata() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
   let temp;
   yield axios.get(server.SERVER_URL+'/dell')
   .then(res=>res.data.datas)
@@ -54,12 +69,18 @@ export function* dellgetlistdata() {
   }).catch(err=>{
     console.log(err)
   })
+  yield put({
+    type: types.LOADINGFALSE
+  })
   yield  put({
     type: types.DELLGETLISTDATA,
     data: temp
   })
 }
 export function* lenovogetlistdata() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
   let temp;
   console.log('lenovo get list data');
   yield axios.get(server.SERVER_URL+'/lenovo')
@@ -69,6 +90,9 @@ export function* lenovogetlistdata() {
       console.log(temp)      
   }).catch(err=>{
     console.log(err)
+  })
+  yield put({
+    type: types.LOADINGFALSE
   })
   yield  put({
     type: types.LENOVOGETLISTDATA,

@@ -3,7 +3,10 @@ import './acer.css'
 import {Col,Row} from 'react-bootstrap';
 import {getAcerList} from '../../../action';
 import {connect} from 'react-redux';
+import Loading from '../../../component/loading/loading';
+
 const _ = require("lodash");
+
 class Acer extends React.Component {
     componentDidMount() {
         this.props.getacerlist();
@@ -17,6 +20,7 @@ class Acer extends React.Component {
         let showItemp = _.filter(arraytemp,(obj)=>obj.attributeID == 33);
         return (
             <div className='container'>
+                {this.props.loading === true? <Loading/>: 
                 <Row>
                 {
                         showItemp.map(item => {
@@ -40,7 +44,7 @@ class Acer extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>
@@ -61,7 +65,7 @@ class Acer extends React.Component {
                         })
                     }
                     {/* <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/laptop/acer/n4050.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/laptop/acer/n4050.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Laptop Acer Travel Mate B3 TMB311-31-C2HB Celeron N4020/4GB/128GB SSD/11.6'' HD/Win11</h6>
                                 <ul>
@@ -76,7 +80,7 @@ class Acer extends React.Component {
                         </div>
                     </Col>
                     <Col className='card col-12 col-sm-3'>
-                        <img src={process.env.PUBLIC_URL + "/laptop/acer/a315.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>
+                        <img src={process.env.PUBLIC_URL + "/laptop/acer/a315.png"} className="card-img-top width-image-mayin" alt="laptop"/>
                             <div className="card-body">
                                 <h6 className="card-title">Laptop Acer Aspire A315 57G 31YD i3 1005G1/4GB/256GB SSD/Nvidia MX330 2GB/Win10</h6>
                                 <ul>
@@ -91,7 +95,8 @@ class Acer extends React.Component {
                         </div>
                     </Col> */}
                 
-             </Row>  
+             </Row> 
+            } 
             </div>
         );
     }
@@ -100,19 +105,20 @@ class Acer extends React.Component {
 function ShowImageLaptop(props) {
     console.log(props.random)
     if(props.random ===0) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/a315.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/a315.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
     }
     else if (props.random ===1) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/acer1.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/acer1.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else if (props.random ===2) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/acer2.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/acer/acer2.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else {
-        return (<img src={process.env.PUBLIC_URL + "/laptop/acer/n4050.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+        return (<img src={process.env.PUBLIC_URL + "/laptop/acer/n4050.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }
 }
 const mapStateToProps = (state, props) => {
     return ({
-        data: state.acer.data
+        data: state.acer.data,
+        loading: state.loading.loading
     })
 }
 

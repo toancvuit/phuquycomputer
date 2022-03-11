@@ -3,6 +3,7 @@ import './hp.css'
 import {Col,Row,Modal,Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {openHpModel,hpgetlist} from '../../../action';
+import Loading from '../../../component/loading/loading';
 const _ = require("lodash");
 class Hp extends React.Component {
     constructor(props){
@@ -22,6 +23,7 @@ class Hp extends React.Component {
         
         return (
             <div className='container'>
+                {this.props.loading === true? <Loading/>: 
                 <Row>
                     {
                         showItemp.map(item => {
@@ -45,7 +47,7 @@ class Hp extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>
@@ -82,7 +84,8 @@ class Hp extends React.Component {
                         </Modal.Footer>
                     </Modal> */}
                     
-             </Row>  
+             </Row> 
+            } 
             </div>
         );
     }
@@ -90,12 +93,12 @@ class Hp extends React.Component {
 function ShowImageLaptop(props) {
     console.log(props.random)
     if(props.random ===0) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
     }
     else if (props.random ===1) {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/hp1.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>)
+    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/hp1.png"} className="card-img-top width-image-mayin" alt="laptop"/>)
     }else {
-    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/hp2.PNG"} className="card-img-top width-image-mayin" alt="laptop"/>);
+    return (<img src={process.env.PUBLIC_URL + "/laptop/hp/hp2.png"} className="card-img-top width-image-mayin" alt="laptop"/>);
 
     }
 }
@@ -103,7 +106,8 @@ function ShowImageLaptop(props) {
 const mapStateToProps = (state,props) => {
     return {
         isOpenModel: state.hp.isOpenModel,
-        data: state.hp.data //listDefault atributeSpectItem
+        data: state.hp.data ,//listDefault atributeSpectItem,
+        loading: state.loading.loading
     }
 }
 const mapDispatchToProps= (dispatch, props) => {

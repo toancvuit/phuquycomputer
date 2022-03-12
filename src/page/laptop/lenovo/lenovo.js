@@ -56,7 +56,7 @@ class Lenovo extends React.Component {
                             return (
                                 <Col key={item.productID} className='card col-12 col-md-4 col-sm-6 col-lg-3'>
                                     <ShowImageLaptop random={picture}/>
-                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.PNG"} className="card-img-top width-image-mayin" alt="laptop"/> */}
+                                    {/* <img src={process.env.PUBLIC_URL + "/laptop/hp/n5030.png"} className="card-img-top width-image-mayin" alt="laptop"/> */}
                                         <div className="card-body">
                                             <h6 className="card-title">{ten}</h6>
                                             <ul>

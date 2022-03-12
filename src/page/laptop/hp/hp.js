@@ -18,7 +18,7 @@ class Hp extends React.Component {
         // console.log(this.props.data.attributeSpecItems);
         let arraytemp = this.props.data.attributeSpecItems;
         let tentemp = this.props.data.listDefault?.list;
-        // console.log(tentemp);
+        console.log(tentemp);
         let showItemp = _.filter(arraytemp,(obj)=>obj.attributeID == 33);
         
         return (

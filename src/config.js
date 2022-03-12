@@ -12,5 +12,5 @@ export const sagaMiddleware = createSagaMiddleware();
 // server configure
 export const store = createStore(reducer, applyMiddleware(sagaMiddleware));
 
-// export const SERVER_URL = 'http://127.0.0.1:4001'
-export const SERVER_URL = 'https://phuquy-server.herokuapp.com'
+export const SERVER_URL = 'http://127.0.0.1:4001'
+// export const SERVER_URL = 'https://phuquy-server.herokuapp.com'

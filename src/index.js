@@ -9,7 +9,8 @@ import { createStore, applyMiddleware } from 'redux'
 import * as configure from './config'
 import rootSaga from './saga';
 import reducer from './reducers';
-import {Provider} from 'react-redux'
+import {Provider} from 'react-redux';
+import 'antd/dist/antd.css';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ;

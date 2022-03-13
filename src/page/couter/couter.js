@@ -2,15 +2,21 @@ import * as React from 'react'
 import PropTypes from 'prop-types';
 import {connect, useSelector, useDispatch  } from 'react-redux';
 import {increment} from '../../action';
-import {useState} from 'react'
+import {useState} from 'react';
+import './couter.css'
+import { Tree, TreeSelect  } from 'antd';
+import { Input, } from 'antd';
+import {Button,Modal} from 'react-bootstrap'
 
 //validator 
 
 import Form from 'react-validation/build/form';
-import Input from 'react-validation/build/input';
+import Inputs from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
 import { isEmail, isEmpty } from 'validator';
+import { ToastContainer } from 'react-bootstrap';
 
+const { Search } = Input;
 
 // const Counter = ({ value, onIncrement, onIncrementAsync, onDecrement, onIncrementIfOdd }) => (
 //   <p>
@@ -34,7 +40,7 @@ const email = (value) => {
   }
   else {
     return <small className="form-text text-success
-    ">email hợp lệ</small>;
+    ">email hợp lệ 222</small>;
   }
 }
 
@@ -46,9 +52,15 @@ const minLength = (value) => {
 class Counter extends React.Component{
   constructor(props){
     super(props);
-    // this.state = {
-    //   value: 0
-    // };
+    this.state = {
+      show: false
+    }
+  }
+  handleShow (){
+    this.setState({show: true})
+  }
+  handleClose() {
+    this.setState({show: false})
   }
   onSubmit(e){
     e.preventDefault();
@@ -59,8 +71,14 @@ class Counter extends React.Component{
     }
     console.log(this.onChangeHandler);
 }
+onSearch=(value)=> {console.log(value);}
   render() {
     let {value,onIncrementIfOdd,onIncrementAsync,onDecrement}=this.props;
+    // var demoDiv = document.getElementById("button");
+    // let left = demoDiv.offsetLeft;
+    // let top = demoDiv.offsetTop;
+    // top +=10
+    // console.log('left' +left+ 'top:'+ top);
     return (
      <div>
         <p>
@@ -68,8 +86,8 @@ class Counter extends React.Component{
           <button onClick={onIncrementIfOdd}>Increment if odd</button>{' '}
           <button onClick={onIncrementAsync}>Increment async</button>
       </p>
-      <Form onSubmit={e => this.onSubmit(e)} ref={c => { this.form = c }}>
-                    <Input 
+            <Form onSubmit={e => this.onSubmit(e)} ref={c => { this.form = c }}>
+                    <Inputs 
                         name="email" 
                         onChange={this.onChangeHandler}
                         type="text" 
@@ -77,7 +95,7 @@ class Counter extends React.Component{
                         className="form-control" 
                         validations={[required, email]}
                     />
-                    <Input 
+                    <Inputs
                         name="password" 
                         onChange={this.onChangeHandler}
                         type="password" 
@@ -85,15 +103,48 @@ class Counter extends React.Component{
                         className="form-control" 
                         validations={[required, minLength]}
                     />
-                    <button className="btn btn-info btn-block login" type="submit">Login</button>
+                    <button id="button" className="btn btn-info btn-block login" type="submit">Login</button>
                     <CheckButton style={{ display: 'none' }} ref={c => { this.checkBtn = c }} />
                 </Form>
                 <ReactHook/>
+           
+                  
+                   {/* <div className='test' >bbbbbbbbbbbb</div> */}
+                   <div style={{display: 'inline-flex'}}>
+                   <Search
+                    placeholder="input search text"
+                    allowClear
+                    enterButton="Search"
+                    onSearch={(e)=>this.onSearch(e)}
+                  />
+                  <Button className='btn-success' onClick={()=>this.handleShow()}>Add</Button>
+                   {/* <Demo /> */}
+                   <Modal show={this.state.show} onHide={()=>this.handleClose()}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={()=>this.handleClose()}>
+                        Close
+                      </Button>
+                      <Button variant="primary" onClick={()=>this.handleClose()}>
+                        Save Changes
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                   </div>
+                   <div>
+                     <Demo/>
+                   </div>
+                
+                
      </div>
   
     )
   }
 }
+
 function ReactHook () {
   const counter = useSelector((state) => state.counter);
   console.log('hook couter'+ counter);
@@ -102,6 +153,105 @@ function ReactHook () {
     <p onClick={()=>dispatcht(increment())}>HHHHHHHHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOKKKKKKKKKKKKKK</p>
   )
 }
+const { DirectoryTree } = Tree;
+const treeData = [
+  {
+    title: 'parent 0',
+    key: '0-0',
+    children: [
+      {
+        title: 'leaf 0-0',
+        key: '0-0-0',
+        isLeaf: true,
+      },
+      {
+        title: 'leaf 0-1',
+        key: '0-0-1',
+        isLeaf: true,
+      },
+    ],
+  },
+  {
+    title: 'parent 1',
+    key: '0-1',
+    children: [
+      {
+        title: 'leaf 1-0',
+        key: '0-1-0',
+        isLeaf: true,
+      },
+      {
+        title: 'leaf 1-1',
+        key: '0-1-1',
+        isLeaf: true,
+      },
+    ],
+  },
+];
+
+const Demo = () => {
+  let [count, setCount] = useState([
+    {
+      title: 'parent 0',
+      key: '0-0',
+      children: [
+        {
+          title: 'leaf 0-0',
+          key: '0-0-0',
+          isLeaf: true,
+        },
+        {
+          title: 'leaf 0-1',
+          key: '0-0-1',
+          isLeaf: true,
+        },
+      ],
+    },
+    {
+      title: 'parent 1',
+      key: '0-1',
+      children: [
+        {
+          title: 'leaf 1-0',
+          key: '0-1-0',
+          isLeaf: true,
+        },
+        {
+          title: 'leaf 1-1',
+          key: '0-1-1',
+          isLeaf: true,
+        },
+      ],
+    },
+  ]);
+  const add = ()=> {
+    console.log('add');
+    // let temp = count.push({title: 'toan', key: 1})
+    
+    setCount([...count,{title: 'toan', key: 'add'}])
+    console.log(count);
+  }
+  const onSelect = (keys, info) => {
+    console.log('Trigger Select', keys, info);
+  };
+
+  const onExpand = () => {
+    console.log('Trigger Expand');
+  };
+
+  return (
+    <div>
+      <DirectoryTree
+      multiple
+      defaultExpandAll
+      onSelect={onSelect}
+      onExpand={onExpand}
+      treeData={count}
+    />
+    {/* <button className='btn-success' onClick={()=>add()}>Add toan</button> */}
+    </div>
+  );
+};
 
 const mapStateToProps = (state,props) => {
   console.log(state.counter);

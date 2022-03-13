@@ -1,29 +1,39 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './hp.css'
 import {Col,Row,Modal,Button} from 'react-bootstrap';
-import {connect} from 'react-redux';
+import {connect, useSelector, useDispatch} from 'react-redux';
 import {openHpModel,hpgetlist} from '../../../action';
 import Loading from '../../../component/loading/loading';
 const _ = require("lodash");
-class Hp extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    componentDidMount() {
-        this.props.hpgetlist();
-    }
+function Hp () {
+    let dispatch = useDispatch();
+    useEffect(()=>{
+        return dispatch(hpgetlist())
+    
+    },[]
+        
+    )
+    let data = useSelector((state)=> state.hp.data);
+    let loading = useSelector((state)=> state.loading.loading);
+    let isOpenModel = useSelector((state)=> state.hp.isOpenModel)
+    // constructor(props){
+    //     super(props);
+    // }
+    // componentDidMount() {
+    //     this.props.hpgetlist();
+    // }
    
-    render () {
-        console.log(this.props.isOpenModel);
+    // render () {
+        // console.log(this.props.isOpenModel);
         // console.log(this.props.data.attributeSpecItems);
-        let arraytemp = this.props.data.attributeSpecItems;
-        let tentemp = this.props.data.listDefault?.list;
+        let arraytemp = data.attributeSpecItems;
+        let tentemp = data.listDefault?.list;
         console.log(tentemp);
         let showItemp = _.filter(arraytemp,(obj)=>obj.attributeID == 33);
         
         return (
             <div className='container'>
-                {this.props.loading === true? <Loading/>: 
+                {loading === true? <Loading/>: 
                 <Row>
                     {
                         showItemp.map(item => {
@@ -59,7 +69,7 @@ class Hp extends React.Component {
                                                 <li> {trongluong}</li>
                                             </ul>
                                             <p className="card-text">{gia}đ</p>
-                                            <Button variant="primary" onClick={this.props.openHpModel}>
+                                            <Button variant="primary" onClick={()=>dispatch(openHpModel())}>
                                                 Open HP Model
                                             </Button>
                                     </div>
@@ -69,26 +79,26 @@ class Hp extends React.Component {
                     }
                     
                     
-                    {/* <Modal show={this.props.isOpenModel} onHide={this.props.openHpModel} animation={false}>
+                    <Modal show={isOpenModel} onHide={()=> dispatch(openHpModel())} animation={false}>
                         <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                         <Modal.Footer>
-                        <Button variant="secondary" onClick={this.props.openHpModel}>
+                        <Button variant="secondary" onClick={()=> dispatch(openHpModel())}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={this.props.openHpModel}>
+                        <Button variant="primary" onClick={()=> dispatch(openHpModel())}>
                             Save Changes
                         </Button>
                         </Modal.Footer>
-                    </Modal> */}
+                    </Modal>
                     
              </Row> 
             } 
             </div>
         );
-    }
+    // }
 };
 function ShowImageLaptop(props) {
     console.log(props.random)
@@ -103,21 +113,22 @@ function ShowImageLaptop(props) {
     }
 }
 
-const mapStateToProps = (state,props) => {
-    return {
-        isOpenModel: state.hp.isOpenModel,
-        data: state.hp.data ,//listDefault atributeSpectItem,
-        loading: state.loading.loading
-    }
-}
-const mapDispatchToProps= (dispatch, props) => {
-    return {
-        openHpModel: ()=> {
-            dispatch(openHpModel())
-        },
-        hpgetlist: ()=> {
-            dispatch(hpgetlist())
-        }
-    }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Hp);
+// const mapStateToProps = (state,props) => {
+//     return {
+//         isOpenModel: state.hp.isOpenModel,
+//         data: state.hp.data ,//listDefault atributeSpectItem,
+//         loading: state.loading.loading
+//     }
+// }
+// const mapDispatchToProps= (dispatch, props) => {
+//     return {
+//         openHpModel: ()=> {
+//             dispatch(openHpModel())
+//         },
+//         hpgetlist: ()=> {
+//             dispatch(hpgetlist())
+//         }
+//     }
+// }
+// export default connect(mapStateToProps,mapDispatchToProps)(Hp);
+export default Hp;

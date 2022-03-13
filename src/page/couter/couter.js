@@ -1,7 +1,8 @@
 import * as React from 'react'
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {increment} from '../../action'
+import {connect, useSelector, useDispatch  } from 'react-redux';
+import {increment} from '../../action';
+import {useState} from 'react'
 
 //validator 
 
@@ -87,11 +88,21 @@ class Counter extends React.Component{
                     <button className="btn btn-info btn-block login" type="submit">Login</button>
                     <CheckButton style={{ display: 'none' }} ref={c => { this.checkBtn = c }} />
                 </Form>
+                <ReactHook/>
      </div>
   
     )
   }
 }
+function ReactHook () {
+  const counter = useSelector((state) => state.counter);
+  console.log('hook couter'+ counter);
+  const dispatcht = useDispatch()
+  return (
+    <p onClick={()=>dispatcht(increment())}>HHHHHHHHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOKKKKKKKKKKKKKK</p>
+  )
+}
+
 const mapStateToProps = (state,props) => {
   console.log(state.counter);
   return {

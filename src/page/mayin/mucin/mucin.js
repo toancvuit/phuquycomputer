@@ -15,14 +15,14 @@ class Mucin extends React.Component {
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/mucin/canong1010.PNG"} class="card-img-top width-image-mucin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/mucin/canong1010.png"} class="card-img-top width-image-mucin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">In Canon G1010</h6>
                             <p className="card-text">200.000đ</p>
                     </div>
                 </Col>
                 <Col className='card col-12 col-sm-3'>
-                     <img src={process.env.PUBLIC_URL + "/mucin/hpm402.PNG"} class="card-img-top width-image-mucin" alt="laptop"/>
+                     <img src={process.env.PUBLIC_URL + "/mucin/hpm402.png"} class="card-img-top width-image-mucin" alt="laptop"/>
                         <div className="card-body">
                             <h6 className="card-title">Mực chai Hp M402</h6>
                             <p className="card-text">90.000đ</p>

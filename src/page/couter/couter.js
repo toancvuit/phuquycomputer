@@ -1,4 +1,5 @@
-import * as React from 'react'
+import * as React from 'react';
+import {forwardRef, useRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types';
 import {connect, useSelector, useDispatch  } from 'react-redux';
 import {increment} from '../../action';
@@ -49,12 +50,22 @@ const minLength = (value) => {
       return <small className="form-text text-danger">Password must be at least 6 characters long</small>;
   }
 }
+
 class Counter extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      show: false
-    }
+      show: false,
+      namefolder: ''
+    };
+    this.childFunc = React.createRef(null); //use ref to access child element
+  }
+  
+  addFolder() {
+    
+  }
+  onChangeNameFolder(e) {
+    this.setState({namefolder: e.target.value})
   }
   handleShow (){
     this.setState({show: true})
@@ -115,27 +126,34 @@ onSearch=(value)=> {console.log(value);}
                     placeholder="input search text"
                     allowClear
                     enterButton="Search"
+                    size="large"
                     onSearch={(e)=>this.onSearch(e)}
                   />
                   <Button className='btn-success' onClick={()=>this.handleShow()}>Add</Button>
                    {/* <Demo /> */}
                    <Modal show={this.state.show} onHide={()=>this.handleClose()}>
                     <Modal.Header closeButton>
-                      <Modal.Title>Modal heading</Modal.Title>
+                      <Modal.Title>Add new folder</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                      <Button variant="secondary" onClick={()=>this.handleClose()}>
-                        Close
-                      </Button>
-                      <Button variant="primary" onClick={()=>this.handleClose()}>
-                        Save Changes
-                      </Button>
+                      <Modal.Body>
+                        <Input
+                          placeholder='add name folder'
+                          onChange={(e)=>this.onChangeNameFolder(e)}
+                          // onChange={(e)=>this.childFunc.current(e)}
+                        ></Input>
+                      </Modal.Body>
+                      <Modal.Footer>
+                        <Button variant="secondary" onClick={()=>this.handleClose()}>
+                          Close
+                        </Button>
+                        <Button  variant="primary" onClick={()=>{this.childFunc.current(this.state.namefolder); this.handleClose()}}>
+                          Add
+                        </Button>
                     </Modal.Footer>
                   </Modal>
                    </div>
                    <div>
-                     <Demo/>
+                     <Demo childFunc={this.childFunc}/>
                    </div>
                 
                 
@@ -189,7 +207,7 @@ const treeData = [
   },
 ];
 
-const Demo = () => {
+const Demo = ({ childFunc })=> {
   let [count, setCount] = useState([
     {
       title: 'parent 0',
@@ -224,12 +242,18 @@ const Demo = () => {
       ],
     },
   ]);
-  const add = ()=> {
-    console.log('add');
-    // let temp = count.push({title: 'toan', key: 1})
+  React.useEffect(() => {
+    // console.log(childFunc);
+    childFunc.current = add
+  }, [])
+  const add = (e)=> {
     
-    setCount([...count,{title: 'toan', key: 'add'}])
-    console.log(count);
+    let temp =count.concat({title:e, key: e});
+console.log('temp'+ temp);
+    setCount(temp);
+    
+    // setCount(temp)
+    console.log('count' +count);
   }
   const onSelect = (keys, info) => {
     console.log('Trigger Select', keys, info);
@@ -251,7 +275,7 @@ const Demo = () => {
     {/* <button className='btn-success' onClick={()=>add()}>Add toan</button> */}
     </div>
   );
-};
+}
 
 const mapStateToProps = (state,props) => {
   console.log(state.counter);

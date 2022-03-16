@@ -252,7 +252,7 @@ const Demo = ({ childFunc })=> {
 console.log('temp'+ temp);
     setCount(temp);
     
-    // setCount(temp)
+    setCount(temp)
     console.log('count' +count);
   }
   const onSelect = (keys, info) => {

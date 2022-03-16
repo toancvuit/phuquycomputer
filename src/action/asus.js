@@ -1,4 +1,4 @@
-import * as type from  '../type/type'
+import * as type from  '../type/type';
 
 export const asusGetList = () => {
     return ({

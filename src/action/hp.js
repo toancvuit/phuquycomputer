@@ -13,5 +13,9 @@ export const hpgetlist = () => {
         data: 'data'
     }
 }
-
+export const hpPcGetList = () => {
+    return {
+        type: type.HPPCGETLIST
+    }
+}
 

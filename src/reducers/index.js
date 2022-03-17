@@ -8,10 +8,11 @@ import dell from './dell';
 import lenovo from './lenovo';
 import asus from './asus';
 import loading from './loading';
-import pcasus from './pcasus'
+import pcasus from './pcasus';
+import pchp from './pchp'
 
 const appReducers = combineReducers({
-  hp,counter,acer,dell,lenovo,asus,loading,pcasus
+  hp,counter,acer,dell,lenovo,asus,loading,pcasus,pchp
 });
 
 export default appReducers;

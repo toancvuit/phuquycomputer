@@ -43,7 +43,7 @@ import Baotrinet from './page/dichvu/baotrinet/baotrinet';
 import Suachuatannha from './page/dichvu/suachuatannha/suachuatannha';
 
 import Mainasus from './page/pc/asus/asus';
-import Maingigabyte from './page/pc/gigabyte/gigabyte';
+import Mainhp from './page/pc/hp/hp';
 import Mainmsi from './page/pc/msi/msi';
 import Counter from './page/couter/couter';
 import {connect} from 'react-redux';
@@ -76,7 +76,7 @@ function App() {
               <Route  path="/laptop/hp" component={()=><Hp/>}></Route>
 
               <Route  path="/main/asus" component={()=><Mainasus/>}></Route>
-              <Route  path="/main/gigabyte" component={()=><Maingigabyte/>}></Route>
+              <Route  path="/main/hp" component={()=><Mainhp/>}></Route>
               <Route  path="/main/msi" component={()=><Mainmsi/>}></Route>
 
               <Route  path="/manhinh/lg" component={()=><LG/>}></Route>

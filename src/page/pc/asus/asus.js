@@ -15,7 +15,7 @@ class Asus extends React.Component {
         console.log(this.props.data);
         // let arraytemp = this.props.data?.attributeSpecItems;
         let tentemp = this.props.data.listDefault?.list || [];
-        console.log(tentemp);
+        // console.log(tentemp);
         // console.log(tentemp);
         // let showItemp = _.filter(arraytemp,(obj)=>obj.attributeID == 33);
         return (
@@ -31,7 +31,7 @@ class Asus extends React.Component {
                             //     return el.id===item.productID
                             // })
                             let ten = item?.name;
-                            console.log(ten);
+                            // console.log(ten);
                             let gia = item.productVariant?.price;
                             // console.log(gia)
                             // let cpu = _.find(itemtemp, (el) => el.cssClass==='icon-cpu')?.specName;

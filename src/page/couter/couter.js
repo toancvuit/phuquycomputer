@@ -208,7 +208,7 @@ const treeData = [
 ];
 
 const Demo = ({ childFunc })=> {
-  let [count, setCount] = useState([
+  const [count, setCount] = useState([
     {
       title: 'parent 0',
       key: '0-0',
@@ -245,15 +245,16 @@ const Demo = ({ childFunc })=> {
   React.useEffect(() => {
     // console.log(childFunc);
     childFunc.current = add
-  }, [])
+
+  }, [childFunc.current])
   const add = (e)=> {
     
     let temp =count.concat({title:e, key: e});
 console.log('temp'+ temp);
-    setCount(temp);
+    setCount([...temp]);
     
-    setCount(temp)
-    console.log('count' +count);
+    // setCount([...temp])
+    // console.log('count' +count);
   }
   const onSelect = (keys, info) => {
     console.log('Trigger Select', keys, info);

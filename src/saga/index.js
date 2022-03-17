@@ -122,6 +122,28 @@ export function* asusgetlistdata() {
     data: temp
   })
 }
+export function* asuspcgetlistdata() {
+  yield put({
+    type: types.LOADINGTRUE
+  })
+  let temp;
+  console.log('asus pc get list data');
+  yield axios.get(server.SERVER_URL+'/pc/asus')
+  .then(res=>res.data.datas)
+  .then(res=> {
+      temp = res.filterModel;
+      console.log(temp)      
+  }).catch(err=>{
+    console.log(err)
+  })
+  yield put({
+    type: types.LOADINGFALSE
+  })
+  yield  put({
+    type: types.ASUSPCGETLISTDATA,
+    data: temp
+  })
+}
 export default function* rootSaga() {
   yield takeEvery('INCREMENT_ASYNC', incrementAsync)
   yield takeEvery(types.HPGETLIST, hpgetlistdataa)
@@ -129,4 +151,5 @@ export default function* rootSaga() {
   yield takeEvery(types.DELLGETLIST, dellgetlistdata)
   yield takeEvery(types.LENOVOGETLIST, lenovogetlistdata)
   yield takeEvery(types.ASUSGETLIST, asusgetlistdata)
+  yield takeEvery(types.ASUSPCGETLIST, asuspcgetlistdata)
 }

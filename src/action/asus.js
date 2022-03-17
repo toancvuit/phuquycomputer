@@ -5,3 +5,8 @@ export const asusGetList = () => {
         type: type.ASUSGETLIST
     })
 }
+export const asusPcGetList = () => {
+    return ({
+        type: type.ASUSPCGETLIST
+    })
+}

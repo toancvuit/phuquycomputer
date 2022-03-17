@@ -33,7 +33,7 @@ class Header extends React.Component {
                         <NavDropdown title={<span className='title-color'>PC-Máy bàn</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
                             <NavDropdown.Item href="/main/asus">Asus</NavDropdown.Item>
                             <NavDropdown.Item href="/main/hp">Hp</NavDropdown.Item>
-                            <NavDropdown.Item href="/main/gigabyte">Main msi</NavDropdown.Item>
+                            <NavDropdown.Item href="/main/lenovo">Lenovo</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title={<span className='title-color'>Màn hình</span>} id="basic-nav-dropdown" className="basic-nav-dropdown">
                             {/* <NavDropdown.Item href="/manhinh/lg"><Link to="/manhinh/lg" className='text-decoration'>LG</Link></NavDropdown.Item> */}

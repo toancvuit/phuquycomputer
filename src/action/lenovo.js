@@ -5,3 +5,8 @@ export const lenovoGetList = ()=> {
         type: type.LENOVOGETLIST
     }
 }
+export const lenovoPCGetList = ()=> {
+    return {
+        type: type.LENOVOPCGETLIST
+    }
+}
